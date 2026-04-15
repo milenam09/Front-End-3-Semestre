@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: deeppink;
+}
+
+@media screen and (max-width:991px){
+    h1{
+        color: pink;
+}
+    img{
+    display: none;
+}
+}
+
+
+image{
+    display: none;
+}
+
+
+@media screen and (max-width:767px){
+    h1{
+        background-color:  deeppink;
+        color: white;
+    }
+    img{
+        display: inline-block;
+    }
+}
