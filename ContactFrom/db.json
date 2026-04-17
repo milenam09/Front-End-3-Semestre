@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": " 1 ",
+      "title": " um título ",
+      "views": 100
+    },
+    {
+      "id": " 2 ",
+      "title": " outro título ",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": " 1 ",
+      "text": " um comentário sobre a postagem 1 ",
+      "postId": " 1 "
+    },
+    {
+      "id": " 2 ",
+      "text": " outro comentário sobre a postagem 1 ",
+      "postId": " 1 "
+    }
+  ],
+  "profile": {
+    "name": " typicode "
+  },
+  "contatos": [
+    {
+      "nome": "Milena",
+      "sobrenome": "Mares",
+      "email": "maresmilena@gmail.com",
+      "id": "DQfORtNW3Dg"
+    },
+    {
+      "nome": "Adriana",
+      "sobrenome": "Vieira",
+      "email": "maresmilena3@gmail.com",
+      "id": "Wxiq9VNbVjg"
+    },
+    {
+      "nome": "Anne",
+      "sobrenome": "Nicole",
+      "email": "annne3@gmail.com",
+      "id": "DQ4Ss1DR2co"
+    },
+    {
+      "nome": "Guilherme",
+      "sobrenome": "Vieira",
+      "email": "Guilherme@gmail.com",
+      "id": "uaVp7TkXkao"
+    },
+    {
+      "nome": "Fabio",
+      "sobrenome": "Ferraz",
+      "email": "fabiocerveja@gmail.com",
+      "id": "lemFHEd8hAM"
+    },
+    {
+      "nome": "Rafaela",
+      "sobrenome": "Artico",
+      "email": "artico@gmail.com",
+      "id": "NDdBnjZ7sCg"
+    }
+  ],
+  "Produto": [
+    {
+      "nome": "Morango",
+      "preco": 3.5,
+      "quantidade": 5,
+      "id": "AIhyn1wiLeU"
+    },
+    {
+      "nome": "banana",
+      "preco": 4.5,
+      "quantidade": 6,
+      "id": "wuSxpsoNfIM"
+    },
+    {
+      "nome": "pesego",
+      "preco": 8.5,
+      "quantidade": 10,
+      "id": "tLJ6eCMHT_k"
+    }
+  ],
+  
+  "$schema": "./node_modules/json-server/schema.json"
+}

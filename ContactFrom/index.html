@@ -63,13 +63,13 @@
 
                     <div class="contact-form__col-b">
                         <input class="contact-form__input contact-form__input--terco" name="+55" id="pais"
-                            placeholder="+55" type="text">
+                            placeholder="+55" type="number">
 
                         <input class="contact-form__input contact-form__input--terco" name="ddd" id="ddd"
-                            placeholder="ddd" type="text">
+                            placeholder="ddd" type="number">
 
                         <input class="contact-form__input contact-form__input--terco" name="ex:99999-9999"
-                            id="telefone" placeholder="ex:99999-9999" type="text">
+                            id="telefone" placeholder="ex:99999-9999" type="number">
                     </div>
                 </div>
                 <!--!telefone-->
@@ -82,14 +82,19 @@
                     </div>
 
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--quarto" name="cep:" id="cep"
-                            placeholder="cep" type="text">
+                        <input 
+                        class="contact-form__input contact-form__input--quarto" 
+                        name="cep:" id="cep"
+                        placeholder="cep" 
+                        type="number" 
+                        onblur="buscarEndereco(this.value)"
+                        >
 
                         <input class="contact-form__input contact-form__input--metade" name="Rua la de casa"
                             id="Endereco" placeholder="Rua la de casa" type="text">
 
                         <input class="contact-form__input contact-form__input--quarto" name="ex:555" id="numero"
-                            placeholder="ex:555" type="text">
+                            placeholder="ex:555" type="number">
                     </div>
                 </div>
 
@@ -100,7 +105,7 @@
 
                     <div class="contact-form__col-b">
                         <input class="contact-form__input contact-form__input--terco" name="Apto X bloco X"
-                            id="Apto" placeholder="Apto X bloco X" type="text">
+                            id="Apto" placeholder="Apto X bloco X" type="">
 
                         <input class="contact-form__input contact-form__input--terco" name="Bairro" id="Bairro"
                             placeholder="Bairro" type="text">
@@ -147,7 +152,7 @@
                         id="Cadastrar" 
                         name="Cadastrar"
                         class="contact-form__button contact-form__input--metade" 
-                        onclick="minhaFuncao();">Cadastrar
+                        onclick="validarFormulario();">Cadastrar
                         </button>
 
                         <button
@@ -163,120 +168,7 @@
             </form>
         </div>
     </main>
-    <script>
-        function minhaFuncao() {
-            let nome = document.getElementById("nome").value.trim();
-            let sobrenome = document.getElementById("sobrenome").value.trim();
-            let Email = document.getElementById("Email").value.trim();
-            let pais = document.getElementById("Email").value.trim();
-            let ddd = document.getElementById("Email").value.trim();
-            let telefone = document.getElementById("Email").value.trim();
-            let cep = document.getElementById("Email").value.trim();
-            let Endereco = document.getElementById("Email").value.trim();
-            let numero = document.getElementById("Email").value.trim();
-            let Apto = document.getElementById("Email").value.trim();
-            let Cidade = document.getElementById("Email").value.trim();
-            let Bairro = document.getElementById("Email").value.trim();
-            let Estado = document.getElementById("Email").value.trim();
-            let anotacoes = document.getElementById("Email").value.trim();
-
-            alert(nome.length);
-
-            if (nome.length == 0 ) {
-               formError("nome");
-            } else {
-                reiniciaBordo("nome")
-            }
-            
-            if (sobrenome.length == 0 ) {
-               formError("sobrenome");
-            } else {
-                reiniciaBordo("sobrenome")
-            }
-
-            if (Email.length == 0 ) {
-               formError("Email");
-            } else {
-                reiniciaBordo("Email")
-            }
-
-            if (pais.length == 0 ) {
-               formError("pais");
-            } else {
-                reiniciaBordo("pais")
-            }
-
-            if (ddd.length == 0 ) {
-               formError("ddd");
-            } else {
-                reiniciaBordo("ddd")
-            }
-
-            if (telefone.length == 0 ) {
-               formError("telefone");
-            } else {
-                reiniciaBordo("telefone")
-            }
-
-            if (cep.length == 0 ) {
-               formError("cep");
-            } else {
-                reiniciaBordo("cep")
-            }
-
-            if (Endereco.length == 0 ) {
-               formError("Endereco");
-            } else {
-                reiniciaBordo("Endereco")
-            }
-            if (numero.length == 0 ) {
-               formError("numero");
-            } else {
-                reiniciaBordo("numero")
-            }
-
-            if (Apto.length == 0 ) {
-               formError("Apto");
-            } else {
-                reiniciaBordo("Apto")
-            }
-
-            if (Cidade.length == 0 ) {
-               formError("Cidade");
-            } else {
-                reiniciaBordo("Cidade")
-            }
-
-            if (Bairro.length == 0 ) {
-               formError("Bairro");
-            } else {
-                reiniciaBordo("Bairro")
-            }
-
-            if (Estado.length == 0 ) {
-               formError("Estado");
-            } else {
-                reiniciaBordo("Estado")
-            }
-
-            if (anotacoes.length == 0 ) {
-               formError("anotacoes");
-            } else {
-                reiniciaBordo("anotacoes")
-            }
-
-           // fim da funcao//
-        }
-
-            function formError(fildId){
-                document.getElementById(fildId).style.border = "1px solid red"
-            }
-
-            function reiniciaBordo(fildId){
-                document.getElementById(fildId).style.border = "none"
-            }
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
