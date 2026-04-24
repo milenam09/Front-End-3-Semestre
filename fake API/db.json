@@ -1,0 +1,78 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "Milena",
+      "idade": 17
+    },
+    {
+      "nome": "Rawany",
+      "idade": 56,
+      "id": "0ze6mW2L2go"
+    },
+    {
+      "nome": "Guuilherme",
+      "idade": 16,
+      "id": "en61HbzasV0"
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "IMC": 30.477966223242138,
+      "textoSituaco": "Obesidade Grau 1",
+      "id": "rcq4x9mvWUM"
+    },
+    {
+      "nome": "Anne",
+      "altura": 1.67,
+      "peso": 51,
+      "IMC": 18.286779733945284,
+      "textoSituaco": "Magreza leve",
+      "id": "fEoEw6lyo_0"
+    },
+    {
+      "nome": "raw",
+      "altura": 1.69,
+      "peso": 50,
+      "IMC": 17.506389832288786,
+      "textoSituaco": "Magreza leve",
+      "id": "HuUujZbYj3k"
+    },
+    {
+      "nome": "Guilherme",
+      "altura": 1.75,
+      "peso": 70,
+      "IMC": 22.857142857142858,
+      "textoSituaco": "Saudavel",
+      "id": "4DpGxjOpVME"
+    },
+    {
+      "nome": "Gustavo",
+      "altura": 1.75,
+      "peso": 60,
+      "IMC": 19.591836734693878,
+      "textoSituaco": "Saudavel",
+      "id": "WSLTnHJeICs"
+    },
+    {
+      "nome": "Mayara",
+      "altura": 1.75,
+      "peso": 80,
+      "IMC": 26.122448979591837,
+      "textoSituaco": "Sobrepeso",
+      "id": "iSPl_9btpLE"
+    },
+    {
+      "nome": "Fabio",
+      "altura": 1.95,
+      "peso": 120,
+      "IMC": 31.558185404339252,
+      "textoSituaco": "Obesidade Grau 1",
+      "id": "uFmgEsj7PvY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
