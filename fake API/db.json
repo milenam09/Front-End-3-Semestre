@@ -72,43 +72,37 @@
       "IMC": 31.558185404339252,
       "textoSituaco": "Obesidade Grau 1",
       "id": "uFmgEsj7PvY"
+    },
+    {
+      "nome": "ana clara",
+      "altura": 1.54,
+      "peso": 50,
+      "IMC": 21.0828132906055,
+      "textoSituaco": "Saudavel",
+      "id": "rjRYVE1LURI"
     }
   ],
   "calculo": [
     {
-      "n1": 3,
-      "n2": 6,
+      "n1": 79,
+      "n2": 8,
       "op": "soma",
-      "resultado": "9.00",
-      "id": "biW9shHTZ_U"
+      "resultado": "87.00",
+      "id": "7cW8jL0fHp8"
     },
     {
-      "n1": 1,
-      "n2": 1,
-      "op": "soma",
-      "resultado": "2.00",
-      "id": "0Lmijb-a_dM"
+      "n1": 69,
+      "n2": 4,
+      "op": "divisao",
+      "resultado": "17.25",
+      "id": "I6smLxbgqFs"
     },
     {
-      "n1": 80,
-      "n2": 79,
+      "n1": 10,
+      "n2": 60,
       "op": "multiplicacao",
-      "resultado": "6320.00",
-      "id": "_JvtE3vFiI8"
-    },
-    {
-      "n1": 50,
-      "n2": 57,
-      "op": "soma",
-      "resultado": "107.00",
-      "id": "373I9MDSu8k"
-    },
-    {
-      "n1": 11,
-      "n2": 1,
-      "op": "soma",
-      "resultado": "12.00",
-      "id": "PZv9VaRqkh8"
+      "resultado": "600.00",
+      "id": "vbx9Bha-66Q"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -58,7 +58,7 @@ function calcular() {
         document.getElementById("operacao").value = "";
         document.getElementById("resultado").innerHTML = "";
 
-        alert(`Conta foi cadastrada no banco:
+        alert(`Cadastrada no banco:
                 Primeiro Numero: ${n1}
                 Segundo Numero: ${n2}
                 Operacao: ${op}
@@ -118,6 +118,7 @@ async function buscarResultados() {
         const dados = await resposta.json();
 
         const container = document.getElementById("cadastro");
+        container.innerHTML = "";
 
         dados.forEach(item => {
             const linha = `
