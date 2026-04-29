@@ -74,5 +74,42 @@
       "id": "uFmgEsj7PvY"
     }
   ],
+  "calculo": [
+    {
+      "n1": 3,
+      "n2": 6,
+      "op": "soma",
+      "resultado": "9.00",
+      "id": "biW9shHTZ_U"
+    },
+    {
+      "n1": 1,
+      "n2": 1,
+      "op": "soma",
+      "resultado": "2.00",
+      "id": "0Lmijb-a_dM"
+    },
+    {
+      "n1": 80,
+      "n2": 79,
+      "op": "multiplicacao",
+      "resultado": "6320.00",
+      "id": "_JvtE3vFiI8"
+    },
+    {
+      "n1": 50,
+      "n2": 57,
+      "op": "soma",
+      "resultado": "107.00",
+      "id": "373I9MDSu8k"
+    },
+    {
+      "n1": 11,
+      "n2": 1,
+      "op": "soma",
+      "resultado": "12.00",
+      "id": "PZv9VaRqkh8"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
