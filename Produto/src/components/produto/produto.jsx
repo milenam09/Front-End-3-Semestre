@@ -9,12 +9,18 @@ export default function Produto() {
     const [descricao, setDescricao] = useState("")
     const [quantidade, setQuantidade] = useState(0)
     const [imagem, setImagem] = useState(img)
+    const [editar, setEditar] = useState (false)
     // const [produto, setProduto] = useState({ nome: "", preco: 0, descricao: "", quantidade: 0, imagem: "" })
 
     const [arrProdutos, setArrProdutos] = useState([])
 
     async function cadastrarProduto(e) {
         e.preventDefault()// nao deixa o formulario ser postado (nao da f5 na pagina)
+       
+       
+    //   alert("Funcao Cadastrar Chamada") 
+    //   return false
+       
         //validar o formulario
         if (
             nome.trim().length == 0 || descricao.trim().length == 0 || isNaN(preco) || isNaN(quantidade)
@@ -73,8 +79,10 @@ export default function Produto() {
     }
 
     useEffect(() => {
-        //chamar a api
-        async function getProdutos() {
+        getProdutos();
+    }, []);
+
+    async function getProdutos() {
             try {
                 //faz requisicao na API
                 const retornoAPI = await fetch("http://localhost:3000/produtos")
@@ -91,9 +99,7 @@ export default function Produto() {
             }
         }
 
-        getProdutos()
-        //jogar os dados no state
-    }, [])
+        
 
     async function Deletar(id) {
         try {
@@ -121,6 +127,11 @@ export default function Produto() {
         }
     }
 
+    function editarProduto(e) {
+        e.preventDefault()
+        alert("Funcao Editar Chamada")
+    }
+
     return (
         <>
             <header className="cabecalho">
@@ -128,19 +139,35 @@ export default function Produto() {
                 <h1 className="titulo--azul">LOJA</h1>
             </header>
 
-            <form className="formzin" action="" onSubmit={cadastrarProduto}>
+            <form className="formzin" action="" onSubmit={editar ? editarProduto : cadastrarProduto}>
                 {/* <div className="input--image">
                     <input className="input--metade" type="text" id="imagem" placeholder="Image" onChange={(e) => setProduto({ ...produto, imagem: e.target.value })} />
                 </div> */}
                 <div className="input--dados">
 
-                    <input className="input--metade" type="text" id="nome" placeholder="Nome" onChange={(e) => setNome(e.target.value)} />
-                    <input className="input--metade" type="number" id="preco" placeholder="Preço" onChange={(e) => setPreco(parseFloat(e.target.value))} />
-                    <input className="input--metade" type="number" id="quantidade" placeholder="Quantidade" onChange={(e) => setQuantidade(parseInt(e.target.value))} />
-                    <input className="input--metade" type="text" id="descricao" placeholder="Descrição" onChange={(e) => setDescricao(e.target.value)} />
+                    <input className="input--metade" type="text" id="nome" placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+                    <input className="input--metade" type="number" id="preco" placeholder="Preço" value={preco} onChange={(e) => setPreco(parseFloat(e.target.value))} />
+                    <input className="input--metade" type="number" id="quantidade" placeholder="Quantidade" value={quantidade} onChange={(e) => setQuantidade(parseInt(e.target.value))} />
+                    <input className="input--metade" type="text" id="descricao" placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
                 </div>
 
-                <button type="submit" className="btn--cadastro">Adicionar Produto</button>
+                { editar && <button 
+                type="submit"
+                className="btn--cadastro"
+                onClick={() => {
+                    setEditar(false);
+                    limparFormulario()
+                }}
+                >Cancelar
+                </button>}
+                 {" "}
+
+                <button 
+                type="submit" 
+                className="btn--cadastro">
+               Adicionar Produto
+                </button>
+
             </form>
 
 
@@ -156,7 +183,18 @@ export default function Produto() {
                             e.preventDefault()
                             Deletar(prod.id)
                         }}>Apagar</a>
+
                         <button className="produtos__btn-comprar">Comprar</button>
+
+                         <a href="" onClick={(e) => {
+                            e.preventDefault()
+                            setEditar(true)
+                            setNome(prod.nome)
+                            setDescricao(prod.descricao)
+                            setPreco(prod.preco)
+                            setQuantidade(prod.quantidade)
+                        }}>Editar</a>
+
                     </div>
                 ))}
             </section>
