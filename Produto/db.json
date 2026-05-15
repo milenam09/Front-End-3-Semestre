@@ -1,0 +1,29 @@
+{
+  "produtos": [
+    {
+      "nome": "Secador ",
+      "descricao": "otima ",
+      "preco": 1000,
+      "quantidade": 9,
+      "imagem": "image.jpg",
+      "id": "LeE8w1-5X2I"
+    },
+    {
+      "nome": "Secador ",
+      "descricao": "otima ",
+      "preco": 10,
+      "quantidade": 9,
+      "imagem": "image.jpg",
+      "id": "H9Ybvk-hHTI"
+    },
+    {
+      "nome": "suco",
+      "preco": 1000,
+      "descricao": "otimo",
+      "quantidade": 56,
+      "imagem": "image.jpg",
+      "id": "0VD83nAFaBI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
