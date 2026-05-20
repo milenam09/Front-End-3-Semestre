@@ -9,12 +9,20 @@
       "id": "LeE8w1-5X2I"
     },
     {
-      "nome": "suco",
-      "preco": 1000,
+      "nome": "chapinha",
       "descricao": "otimo",
+      "preco": 1000,
       "quantidade": 56,
       "imagem": "image.jpg",
       "id": "0VD83nAFaBI"
+    },
+    {
+      "nome": "fritadeira",
+      "descricao": "otima ",
+      "preco": 100,
+      "quantidade": 4,
+      "imagem": "image.jpg",
+      "id": "LsGkwFjy_0I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
