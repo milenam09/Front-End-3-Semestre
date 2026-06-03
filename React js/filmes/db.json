@@ -1,0 +1,23 @@
+{
+  "Genero": [
+    {
+      "idGenero": "e638752e-f77a-4fc7-a083-948c107378b6",
+      "nome": "Comedia",
+      "filmes": [],
+      "id": "hlI9tCewbNk"
+    },
+    {
+      "idGenero": "802f1aeb-ebc4-449d-acdc-df036f04ca86",
+      "nome": "Terror",
+      "filmes": [],
+      "id": "qHXoNd10nvM"
+    },
+    {
+      "idGenero": "6ba2f4a6-01c3-4d36-ab6f-671bbc13d360",
+      "nome": "Romance",
+      "filmes": [],
+      "id": "HhFQuo4t5Is"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
