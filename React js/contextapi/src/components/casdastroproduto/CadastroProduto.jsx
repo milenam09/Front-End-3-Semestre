@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import {ProdutoContext} from "../context/ProdutoContext";
+import ListarProduto from "../listarprodutos/ListarProdutos";
 
 const CadastroProduto = () => {
   const [nome, setNome] = useState("");
@@ -28,6 +29,8 @@ const CadastroProduto = () => {
 
         <button type="submit">Cadastrar</button>
       </form>
+
+      <ListarProduto/>
     </div>
   );
 };

@@ -4,6 +4,13 @@ import { UsuarioContext } from "../context/UsuarioContext";
  const Perfil = () => {
     const {usuario, setUsuario } = useContext(UsuarioContext);
         const [novoUsuario, setNovoUsuario] = useState("");
+
+        const login = () => {
+            setUsuario(novoUsuario);
+            localStorage.setItem("usuario",JSON.stringify (novoUsuario))
+            setNovoUsuario("");
+        }
+
     return (
         <>
         <h2>Perfil do Usuario</h2>
@@ -21,9 +28,9 @@ import { UsuarioContext } from "../context/UsuarioContext";
 
             <button onClick={
                 () => {
-                  setUsuario(novoUsuario)
+                 login() 
                 }
-            }>Alterar Usuario</button>
+            }>Entrar</button>
         </p>
          </>
     )

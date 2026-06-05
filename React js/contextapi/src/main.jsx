@@ -4,11 +4,14 @@ import './index.css'
 import App from './App.jsx'
 // import UsuarioProvider from './context/UsuarioProvider.jsx'
 import ProdutoProvider from './components/context/ProdutoProvider.jsx'
+import UsuarioProvider from './components/context/UsuarioProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProdutoProvider>
+    <UsuarioProvider>
+      <ProdutoProvider>
       <App />
-    </ProdutoProvider>
+      </ProdutoProvider>
+    </UsuarioProvider>
   </StrictMode>,
 )
