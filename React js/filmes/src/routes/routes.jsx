@@ -2,14 +2,27 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Login from "../pages/login/Login"
 import CadastroFilmes from "../pages/cadastroFilmes/CadastroFilmes"
 import CadastroGenero from "../pages/cadastroGenero/CadastroGenero"
+import PrivateRoute from "./PrivateRoute"
 
 const Rotas = () => {
     return(
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<Login/>}/>
-            <Route path="/filmes" element={<CadastroFilmes/>}/>
-            <Route path="/generos" element={<CadastroGenero/>}/>
+            <Route 
+            path="/filmes" 
+            element={
+            <PrivateRoute>
+                <CadastroFilmes/>
+            </PrivateRoute>}/>
+
+            <Route 
+              path="/generos" 
+                element={
+                    <PrivateRoute>
+                        <CadastroGenero/>
+                    </PrivateRoute>
+                }/>
         </Routes>
         </BrowserRouter>
     )
